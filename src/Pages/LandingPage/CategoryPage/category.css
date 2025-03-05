@@ -1,0 +1,150 @@
+.category-page {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.add-category-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.add-category-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-category-section button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-category-section button:hover {
+    background-color: #218838;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.category-item input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.category-item button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-item button:nth-child(2) {
+    background-color: #ffc107;
+    color: black;
+}
+
+.category-item button:nth-child(2):hover {
+    background-color: #e0a800;
+}
+
+.category-item button:nth-child(3) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.category-item button:nth-child(3):hover {
+    background-color: #c82333;
+}
+
+
+
+
+/*TEST*/
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #ccc;
+    font-weight: bold;
+}
+
+.header-name {
+    flex: 1;
+}
+
+.header-actions {
+    width: 150px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.category-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-top: 5px;
+}
+
+.category-name {
+    flex: 1;
+}
+
+.category-item button {
+    padding: 5px 10px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.category-item button:nth-child(2) {
+    background-color: #ffc107;
+    color: black;
+}
+
+.category-item button:nth-child(2):hover {
+    background-color: #e0a800;
+}
+
+.category-item button:nth-child(3) {
+    background-color: #dc3545;
+    color: white;
+}
+
+.category-item button:nth-child(3):hover {
+    background-color: #c82333;
+}

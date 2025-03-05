@@ -1,0 +1,133 @@
+/* Import Poppins font for a modern vibe */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+.adminPage {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1F2A44, #2E8B57);
+    font-family: 'Poppins', sans-serif;
+    padding: 40px 20px;
+    color: #FFF;
+}
+
+.adminHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.adminHeader h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFF;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.adminHeader p {
+    font-size: 2.0rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 5px 0 0;
+}
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card i {
+    font-size: 2rem;
+    color: #FFC107; /* Amber accent */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 2.0rem;
+    font-weight: 600;
+    color: #FFF;
+    margin: 10px 0;
+}
+
+.card p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.logoutCard {
+    background: rgba(228, 77, 38, 0.9); /* Vibrant orange for logout */
+}
+
+.logoutCard:hover {
+    background: #E44D26;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.logoutCard i {
+    color: #FFF;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .adminHeader h1 {
+        font-size: 2rem;
+    }
+
+    .adminHeader p {
+        font-size: 1rem;
+    }
+
+    .cardContainer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card i {
+        font-size: 1.8rem;
+    }
+
+    .card h3 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .adminHeader h1 {
+        font-size: 1.5rem;
+    }
+
+    .adminHeader p {
+        font-size: 0.9rem;
+    }
+
+    .cardContainer {
+        grid-template-columns: 1fr;
+    }
+}

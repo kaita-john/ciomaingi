@@ -1,0 +1,135 @@
+/* PurchasesPage.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+.page {
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+}
+
+.header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+/* User Information */
+.userInfo {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.userInfoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.userInfoHeader h2 {
+    margin: 0;
+    color: #333;
+}
+
+.purchaseDate {
+    text-align: right;
+}
+
+.purchaseDate p {
+    margin: 0;
+    color: #666;
+}
+
+.purchaseDate strong {
+    color: #333;
+}
+
+.userInfo p {
+    margin: 5px 0;
+    color: #666;
+}
+
+/* Purchase Items */
+.purchaseItems {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+/* Item Card */
+.itemCard {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.itemImage img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.itemDetails {
+    flex: 1;
+}
+
+.itemDetails h3 {
+    margin: 0;
+    color: #333;
+}
+
+.itemDetails p {
+    display: flex;
+    flex: 1;
+    margin: 5px 0;
+    color: green;
+}
+
+.itemDetails strong {
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .itemCard {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .itemImage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .userInfoHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .purchaseDate {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+/* Loading and Error Styles */
+.error {
+    color: red;
+    text-align: center;
+}

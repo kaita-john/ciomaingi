@@ -1,0 +1,55 @@
+.awesome-div {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), #FFFFFF); /* Soft green-to-white gradient */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center;
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    width: 100%;
+    margin: 0 auto;
+    transition: transform 0.3s ease; /* Smooth hover transition */
+}
+
+.awesome-div:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+}
+
+.awesome-div h2 {
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+    padding-top: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    color: white; /* Earthy green */
+    background: linear-gradient(45deg, #e44d26, #FFC300);
+    border-bottom: 2px solid grey; /* Underline for emphasis */
+    padding-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for readability */
+}
+
+.awesome-div p {
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left; /* Left-aligned for better readability */
+}
+
+.awesome-div strong {
+    color: black; /* Green to highlight key phrases */
+    font-weight: bold;
+}
+
+
+.head {
+    color: #333;
+    font-size: 1.6em;
+    font-weight: 900;
+    background: linear-gradient(45deg, #e44d26, #FFC300);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center; /* Added this line */
+    /*border-bottom: 1px solid grey; !* Underline for emphasis *!*/
+}

@@ -1,0 +1,15 @@
+/* Ensure the root takes full height */
+#root {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: ghostwhite;
+}
+
+footer {
+    background-color: yellow;
+    color: white;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
