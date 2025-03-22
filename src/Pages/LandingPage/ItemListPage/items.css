@@ -1,78 +1,134 @@
 /* General Styles */
 .item-list-container {
-    max-width: 1200px;
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .item-list-container h2 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Table Styles */
 .item-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
 }
 
 .item-table th,
 .item-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
 }
 
 .item-table th {
-    background-color: #f5f5f5;
-    font-weight: 600;
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Limit the width of the description column */
+.item-table th:nth-child(3),
+.item-table td:nth-child(3) {
+  max-width: 200px; /* Adjust this value as needed */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .item-table tr:hover {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 /* Actions Container */
 .actions {
-    display: flex;
-    gap: 8px; /* Space between buttons */
-    align-items: center; /* Vertically center buttons */
+  display: flex;
+  gap: 8px; /* Space between buttons */
+  align-items: center; /* Vertically center buttons */
 }
 
 /* Button Styles */
 .edit-button,
 .delete-button {
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .edit-button {
-    background: #28a745;
-    color: white;
+  background: #28a745;
+  color: white;
 }
 
 .edit-button:hover {
-    background: #218838;
+  background: #218838;
 }
 
 .delete-button {
-    background: #ff4d4d;
-    color: white;
+  background: #ff4d4d;
+  color: white;
 }
 
 .delete-button:hover {
-    background: #ff1a1a;
+  background: #ff1a1a;
+}
+
+/* Styles for stock status and out-of-stock button */
+.in-stock {
+  color: #28a745;
+  font-weight: 500;
+}
+
+.out-of-stock {
+  color: #d9534f;
+  font-weight: 500;
+}
+
+.out-of-stock-button {
+  padding: 8px 15px;
+  background: #d9534f;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.out-of-stock-button:hover {
+  background: #c9302c;
+}
+
+.out-of-stock-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* New styles for restock button */
+.restock-button {
+  padding: 8px 15px;
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.restock-button:hover {
+  background: #218838;
 }

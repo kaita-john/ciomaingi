@@ -1,0 +1,187 @@
+/* General Styles */
+.aboutUsContainer {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background-color: #f9f5f0;
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  height: 50vh;
+  background: url('https://www.japan.go.jp/kizuna/_userdata/ogp/2024/04/japanese_candles_in_noto.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroOverlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  color: #fff;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heroSubtitle {
+  font-size: 1.5rem;
+  color: #f5f5f5;
+  font-weight: 300;
+}
+
+/* Content Section */
+.contentSection {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.textContent {
+  flex: 1;
+}
+
+.textContent h2 {
+  font-size: 2.9rem;
+  color: #4a3c31;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.textContent h2::after {
+  content: '';
+  width: 100% ;
+  height: 3px;
+  background: pink;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+}
+
+.textContent p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.imageContent {
+  flex: 1;
+}
+
+.contentImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Visual Story Section */
+.visualStorySection {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.visualStoryWrapper {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.visualStoryItem {
+  text-align: center;
+  flex: 1;
+}
+
+.visualImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.visualImage:hover {
+  transform: scale(1.05);
+}
+
+.visualStoryItem p {
+  font-size: 1rem;
+  color: #4a3c31;
+  font-weight: 500;
+}
+
+/* Call to Action Section */
+.ctaSection {
+  padding: 80px 20px;
+  text-align: center;
+  background: #d4a373;
+  color: #fff;
+}
+
+.ctaSection h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.ctaSection p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.ctaButton {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  background: #4a3c31;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #6b5846;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+  }
+
+  .contentImage {
+    height: 300px;
+  }
+
+  .visualStoryWrapper {
+    flex-direction: column;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroSubtitle {
+    font-size: 1.2rem;
+  }
+
+}

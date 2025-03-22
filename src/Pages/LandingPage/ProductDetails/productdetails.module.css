@@ -284,3 +284,250 @@
     font-size: 14px;
     margin-top: 20px;
 }
+
+
+/* Existing styles (assumed to be in the file) */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    gap: 40px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageSection {
+    flex: 1;
+}
+
+.mainImageContainer {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.otherImagesContainer {
+    margin-top: 20px;
+}
+
+.otherImagesTitle {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.otherImagesPreview {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.imagePreview {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productInfo {
+    flex: 1;
+}
+
+.productInfoCard {
+    padding: 20px;
+}
+
+.productTitle {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.productPrice {
+    font-size: 1.5rem;
+    color: #d4a373;
+    margin-bottom: 10px;
+}
+
+.quantityCard {
+    margin: 20px 0;
+}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qtyBtn {
+    padding: 5px 10px;
+    background: #4a3c31;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.qtyValue {
+    font-size: 1.2rem;
+}
+
+.descriptionCard {
+    margin-top: 20px;
+}
+
+.productDescription {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.buttonGroupCard {
+    margin-top: 20px;
+}
+
+.buyNow {
+    padding: 10px 20px;
+    background: #d4a373;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.buyNow:hover {
+    background: #b5895a;
+}
+
+.error {
+    text-align: center;
+    color: #d9534f;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+
+.stockStatus {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #4a3c31;
+    text-align: left; /* Align to start (left) */
+}
+
+.outOfStock {
+    color: #d9534f;
+    text-align: left; /* Align to start (left) */
+}
+
+
+.stockStatus.outOfStock {
+    color: #d9534f;
+}
+
+.dialogOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dialog h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #4a3c31;
+}
+
+.dialog p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.dialogField {
+    margin-bottom: 15px;
+}
+
+.dialogField label {
+    display: block;
+    font-size: 0.9rem;
+    color: #4a3c31;
+    margin-bottom: 5px;
+}
+
+.dialogField input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.dialogButtons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.dialogSubmit {
+    padding: 8px 20px;
+    background: #d4a373;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dialogSubmit:hover {
+    background: #b5895a;
+}
+
+.dialogCancel {
+    padding: 8px 20px;
+    background: #ddd;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dialogCancel:hover {
+    background: #ccc;
+}

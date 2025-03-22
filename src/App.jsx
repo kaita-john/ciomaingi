@@ -20,6 +20,7 @@ import "./App.css";
 import {AuthProvider} from "./Components/authContext.jsx";
 import ProtectedRoute from "./Components/protectedRoute.jsx";
 import AdminPage from "./Pages/LandingPage/AdminPage/adminpage.jsx";
+import AboutUs from "./Pages/LandingPage/AboutUsPage/aboutus.jsx";
 
 // Custom component to handle conditional rendering
 const AppContent = () => {
@@ -34,6 +35,7 @@ const AppContent = () => {
                     <Route path="/" element={<LandingPage/>}/>
                     <Route path="/products/:productId" element={<ProductDetails/>}/>
                     <Route path="/cart" element={<CartPage/>}/>
+                    <Route path="/aboutus" element={<AboutUs/>}/>
                     <Route path="/checkout" element={<CheckoutPage/>}/>
                     <Route path="/items" element={<ItemUploadPage/>}/>
                     <Route path="/items/edit" element={<ItemUploadPage/>}/>
@@ -73,3 +75,6 @@ function App() {
 }
 
 export default App;
+
+
+

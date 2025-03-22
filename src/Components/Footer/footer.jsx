@@ -8,56 +8,65 @@ const Footer = () => {
                 {/* container  */}
                 <div className="container">
                     {/* row  */}
-                    <div className="row">
 
-                        <p style={{color: 'white', marginTop: '0px', marginBottom: '0px'}}>@CopyRight 2025 || All Rights Reserved</p>
-                        {/*<div className="col-md-3 col-xs-6">
-                            <div className="footer">
-                                <h3 className="footer-title">About Us</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut.</p>
-                                <ul className="footer-links">
-                                    <li><a href="#"><i className="fa fa-map-marker"></i>1734 Stonecoal Road</a></li>
-                                    <li><a href="#"><i className="fa fa-phone"></i>+021-95-51-84</a></li>
-                                    <li><a href="#"><i className="fa fa-envelope-o"></i>email@email.com</a></li>
-                                </ul>
-                            </div>
-                        </div>*/}
+                    <div className="row"
+                         style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
 
-                       {/* <div className="col-md-3 col-xs-6">
-                            <div className="footer">
-                                <h3 className="footer-title">Categories</h3>
-                                <ul className="footer-links">
-                                    <li><a href="#">Hot deals</a></li>
-                                    <li><a href="#">Laptops</a></li>
-                                    <li><a href="#">Smartphones</a></li>
-                                </ul>
-                            </div>
-                        </div>*/}
+                        <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
+                            <a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer" style={{
+                                color: '#FFFFFF',
+                                margin: '0 15px',
+                                fontSize: '24px',
+                                transition: 'color 0.3s ease'
+                            }} onMouseOver={(e) => e.target.style.color = '#00BFFF'}
+                               onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
+                                <i className="fa fa-youtube"></i>
+                            </a>
+                            <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer" style={{
+                                color: '#FFFFFF',
+                                margin: '0 15px',
+                                fontSize: '24px',
+                                transition: 'color 0.3s ease'
+                            }} onMouseOver={(e) => e.target.style.color = '#1877F2'}
+                               onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
+                                <i className="fa fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/cio_maingi_candles/" target="_blank" rel="noopener noreferrer" style={{
+                                color: '#FFFFFF',
+                                margin: '0 15px',
+                                fontSize: '24px',
+                                transition: 'color 0.3s ease'
+                            }} onMouseOver={(e) => e.target.style.color = '#E4405F'}
+                               onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
+                                <i className="fa fa-instagram"></i>
+                            </a>
+                            <a href="YOUR_TWITTER_LINK" target="_blank" rel="noopener noreferrer" style={{
+                                color: '#FFFFFF',
+                                margin: '0 15px',
+                                fontSize: '24px',
+                                transition: 'color 0.3s ease'
+                            }} onMouseOver={(e) => e.target.style.color = '#1DA1F2'}
+                               onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
+                                <i className="fa fa-twitter"></i>
+                            </a>
+                        </div>
 
-                        {/*<div className="clearfix visible-xs"></div>*/}
+                        <div style={{marginBottom: '10px'}}>
+                            <a href="#" style={{
+                                color: '#E0E0E0',
+                                textDecoration: 'none',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center'
+                            }}>
+                                <i className="fa fa-map-marker" style={{marginRight: '8px'}}></i> Tom Mboya Strt,
+                                Platinum Plaza, 3rd Floor Room 305 @ Shelves.254
+                            </a>
+                        </div>
 
-                        {/*<div className="col-md-3 col-xs-6">
-                            <div className="footer">
-                                <h3 className="footer-title">Information</h3>
-                                <ul className="footer-links">
-                                    <li><a href="#">About Us</a></li>
-                                    <li><a href="#">Contact Us</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
-                                </ul>
-                            </div>
-                        </div>*/}
+                        <p style={{color: '#9E9E9E', marginTop: '0px', marginBottom: '0px'}}>&copy; Copyright 2025 ||
+                            All Rights Reserved</p>
 
-                        {/*<div className="col-md-3 col-xs-6">
-                            <div className="footer">
-                                <h3 className="footer-title">Service</h3>
-                                <ul className="footer-links">
-                                    <li><a href="#">My Account</a></li>
-                                    <li><a href="#">View Cart</a></li>
-                                    <li><a href="#">Wishlist</a></li>
-                                </ul>
-                            </div>
-                        </div>*/}
                     </div>
                     {/* /row  */}
                 </div>

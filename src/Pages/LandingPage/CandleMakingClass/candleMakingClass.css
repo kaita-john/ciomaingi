@@ -204,3 +204,10 @@
     opacity: 0.7;
     cursor: not-allowed;
 }
+
+.coming-soon-message {
+  color: #d9534f; /* Red color to grab attention */
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}

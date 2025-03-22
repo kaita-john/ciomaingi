@@ -43,14 +43,15 @@ const Header = () => {
                     <div className="container">
                         <div className="top-header-content">
                             <ul className="contact-info">
-                                <li><a href="tel:+254728705715"><i className="fa fa-phone"></i> +254 728 705 715</a>
+                                <li><a href="tel:+254727237104"><i className="fa fa-phone"></i> +254 727 237 104 </a>
                                 </li>
                                 <li><a href="mailto:maingiciocandles@gmail.com"><i
-                                    className="fa fa-envelope"></i> maingiciocandles@gmail.com</a></li>
-                                <li><a href="#"><i className="fa fa-map-marker"></i> Nairobi, Kenya</a></li>
+                                    className="fa fa-envelope"></i>ciomaingicandles@gmail.com</a></li>
                             </ul>
                             <ul className="nav-links">
                                 <li><a href="#" onClick={() => navigate('/')}><i className="fa fa-home"></i> Home</a>
+                                </li>
+                                <li><a href="#" onClick={() => navigate('/aboutus')}><i className="fa fa-address-book"></i> About Us</a>
                                 </li>
                                 <li className="dropdown" ref={dropdownRef}>
 
@@ -105,7 +106,7 @@ const Header = () => {
 
                             {/* Featured Action (Large Central Element) */}
                             <div className="header-center">
-                                <a href="makeyourcandle" className="featured-action">
+                                <a href="/makeyourcandle" className="featured-action">
                                     Candle Making Classes
                                 </a>
                             </div>
