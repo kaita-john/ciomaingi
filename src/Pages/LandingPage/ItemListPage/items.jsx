@@ -13,7 +13,7 @@ const ItemListPage = () => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:8000/api/v1/items/list");
+                const response = await axios.get("http://ciomaingifarm.website/api/v1/items/list");
                 setItems(response.data);
             } catch (error) {
                 console.error("Error fetching items:", error);
@@ -29,7 +29,7 @@ const ItemListPage = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this item?")) {
             try {
-                await axios.delete(`http://127.0.0.1:8000/api/v1/items/${id}`);
+                await axios.delete(`http://ciomaingifarm.website/api/v1/items/${id}`);
                 setItems(items.filter((item) => item.id !== id)); // Remove the deleted item from the list
                 alert("Item deleted successfully!");
             } catch (error) {
@@ -43,7 +43,7 @@ const ItemListPage = () => {
     const handleMarkOutOfStock = async (item) => {
         if (window.confirm(`Are you sure you want to mark "${item.name}" as out of stock?`)) {
             try {
-                await axios.patch(`http://127.0.0.1:8000/api/v1/items/out/${item.id}`, {
+                await axios.patch(`http://ciomaingifarm.website/api/v1/items/out/${item.id}`, {
                     inStock: false,
                     amount: 0,
                 });
@@ -65,7 +65,7 @@ const ItemListPage = () => {
     const handleRestock = async (item) => {
         if (window.confirm("Are you sure you have restocked this item?")) {
             try {
-                await axios.patch(`http://127.0.0.1:8000/api/v1/items/restock/${item.id}`, {
+                await axios.patch(`http://ciomaingifarm.website/api/v1/items/restock/${item.id}`, {
                     inStock: true,
                     amount: 1, // Default to 1, you can adjust this as needed
                 });

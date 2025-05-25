@@ -10,7 +10,7 @@ const ClassBookings = () => {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const response = await axios.get('http://127.0.0.1:8000/api/v1/candleclasses/list');
+                const response = await axios.get('http://ciomaingifarm.website/api/v1/candleclasses/list');
                 setBookings(response.data);
                 setIsLoading(false);
             } catch (err) {
@@ -28,7 +28,7 @@ const ClassBookings = () => {
         }
 
         try {
-            await axios.delete(`http://127.0.0.1:8000/api/v1/candleclasses/${bookingId}`);
+            await axios.delete(`http://ciomaingifarm.website/api/v1/candleclasses/${bookingId}`);
             setBookings(bookings.filter((booking) => booking.id !== bookingId));
             alert('Booking deleted successfully!');
         } catch (err) {

@@ -11,7 +11,7 @@ const ViewMakeYourCandles = () => {
     useEffect(() => {
         const fetchCandles = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:8000/api/v1/makeyourcandle/list");
+                const response = await axios.get("http://ciomaingifarm.website/api/v1/makeyourcandle/list");
                 setCandles(response.data);
             } catch (err) {
                 setError("Failed to fetch candle orders. Please try again later.");
@@ -28,7 +28,7 @@ const ViewMakeYourCandles = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this order?")) {
             try {
-                await axios.delete(`http://127.0.0.1:8000/api/v1/makeyourcandle/${id}`);
+                await axios.delete(`http://ciomaingifarm.website/api/v1/makeyourcandle/${id}`);
                 setCandles((prevCandles) => prevCandles.filter((candle) => candle.id !== id));
                 alert("Order deleted successfully!");
             } catch (err) {
