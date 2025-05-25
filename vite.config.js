@@ -13,7 +13,7 @@ export default defineConfig({
         ],
     },
     plugins: [react()],
-    base: '/ciomaingi', // Matches GitHub Pages path
+    base: '/ciomaingi/', // Matches GitHub Pages path
     build: {
         outDir: 'dist', // Ensure output directory is dist
     },
