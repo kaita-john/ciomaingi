@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route, Routes, Outlet, useLocation} from "react-router-dom";
+import {BrowserRouter, Route, Routes, useLocation} from "react-router-dom";
 import {CartProvider} from "./Hooks/cartContext.jsx"; // Adjust path as needed
 import Header from "./Components/Header/header.jsx";
 import Footer from "./Components/Footer/footer.jsx";
