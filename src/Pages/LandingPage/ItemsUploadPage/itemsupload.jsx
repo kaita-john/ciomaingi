@@ -66,9 +66,9 @@ const ItemUploadPage = () => {
         };
         try {
             if (item) {
-                await axios.put(`http://ciomaingifarm.website/api/v1/items/${item.id}`, payload);
+                await axios.put(`https://ciomaingifarm.website/api/v1/items/${item.id}`, payload);
             } else {
-                await axios.post("http://ciomaingifarm.website/api/v1/items/create", payload);
+                await axios.post("https://ciomaingifarm.website/api/v1/items/create", payload);
             }
             alert("Item saved successfully!");
         } catch (error) {

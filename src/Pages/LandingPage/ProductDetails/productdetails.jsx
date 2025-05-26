@@ -70,7 +70,7 @@ const ProductDetails = () => {
         };
 
         try {
-            const response = await axios.post('http://ciomaingifarm.website/api/v1/items/notify-out-of-stock', notifyData);
+            const response = await axios.post('https://ciomaingifarm.website/api/v1/items/notify-out-of-stock', notifyData);
             if (response.data.status === 'success') {
                 alert(response.data.message);
                 setDialogData({name: '', email: ''}); // Reset form

@@ -16,7 +16,7 @@ const CategoryPage = () => {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get("http://ciomaingifarm.website/api/v1/categories/list");
+            const response = await axios.get("https://ciomaingifarm.website/api/v1/categories/list");
             setCategories(response.data);
         } catch (error) {
             console.error("Error fetching categories:", error);
@@ -28,7 +28,7 @@ const CategoryPage = () => {
         if (!newCategory.trim()) return;
 
         try {
-            const response = await axios.post("http://ciomaingifarm.website/api/v1/categories/create", {
+            const response = await axios.post("https://ciomaingifarm.website/api/v1/categories/create", {
                 name: newCategory,
             });
             setCategories([...categories, response.data]);
@@ -50,7 +50,7 @@ const CategoryPage = () => {
         if (!editCategoryName.trim()) return;
 
         try {
-            await axios.put(`http://ciomaingifarm.website/api/v1/categories/${editCategoryId}`, {
+            await axios.put(`https://ciomaingifarm.website/api/v1/categories/${editCategoryId}`, {
                 name: editCategoryName,
             });
             const updatedCategories = categories.map((cat) =>
@@ -67,7 +67,7 @@ const CategoryPage = () => {
     // Delete a category
     const handleDeleteCategory = async (id) => {
         try {
-            await axios.delete(`http://ciomaingifarm.website/api/v1/categories/${id}`);
+            await axios.delete(`https://ciomaingifarm.website/api/v1/categories/${id}`);
             const updatedCategories = categories.filter((cat) => cat.id !== id);
             setCategories(updatedCategories);
         } catch (error) {

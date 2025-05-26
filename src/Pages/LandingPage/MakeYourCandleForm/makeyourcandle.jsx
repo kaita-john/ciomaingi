@@ -68,7 +68,7 @@ const CandleForm = () => {
         }
 
         try {
-            await axios.post(`http://ciomaingifarm.website/api/v1/makeyourcandle/create`, formData);
+            await axios.post(`https://ciomaingifarm.website/api/v1/makeyourcandle/create`, formData);
             alert("Item saved successfully!");
             // Reset the form after successful submission
             setFormData({

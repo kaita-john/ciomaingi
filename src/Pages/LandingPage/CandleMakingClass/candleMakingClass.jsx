@@ -87,7 +87,7 @@ const CandleMakingClass = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://ciomaingifarm.website/api/v1/candleclasses/create', formData);
+      const response = await axios.post('https://ciomaingifarm.website/api/v1/candleclasses/create', formData);
       console.log('Booking Response:', response.data);
       alert('Thank you! Your booking request has been successfully submitted.');
       // Reset form

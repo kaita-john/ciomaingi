@@ -3,7 +3,7 @@ import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
 
 
-const baseUrl = "http://ciomaingifarm.website"
+const baseUrl = "https://ciomaingifarm.website"
 
 function errorChecker(error, setError) {
     console.error("Request error:", error);
@@ -50,7 +50,7 @@ export function useGetItems(productId, setMainImage) {
 
         const fetchProduct = async () => {
             try {
-                const url = productId ? `${baseUrl}/api/v1/items/${productId}` : `http://ciomaingifarm.website/api/v1/items/list`;
+                const url = productId ? `${baseUrl}/api/v1/items/${productId}` : `https://ciomaingifarm.website/api/v1/items/list`;
                 const response = await axios.get(url);
 
                 // Check if the response contains valid data

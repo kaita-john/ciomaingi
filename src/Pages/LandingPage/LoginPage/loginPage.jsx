@@ -21,7 +21,7 @@ const LoginPage = () => {
         setError("");
 
         try {
-            const response = await axios.post("http://ciomaingifarm.website/api/v1/users/login", {
+            const response = await axios.post("https://ciomaingifarm.website/api/v1/users/login", {
                 email,
                 password,
             });

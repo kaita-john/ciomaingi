@@ -10,7 +10,7 @@ const PurchasesPage = () => {
     useEffect(() => {
         const fetchPurchases = async () => {
             try {
-                const response = await axios.get("http://ciomaingifarm.website/api/v1/purchases/list");
+                const response = await axios.get("https://ciomaingifarm.website/api/v1/purchases/list");
                 setPurchases(response.data);
             } catch (error) {
                 setError(error.message || "An error occurred while fetching purchases.");
