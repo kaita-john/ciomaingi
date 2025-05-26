@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from "react";
 import {useCart} from "../../Hooks/cartContext.jsx";
 import {useNavigate} from "react-router-dom";
 import './header.css'
+import { Link } from "react-router-dom";
 import {useAuth} from "../authContext.jsx";
 
 const Header = () => {
@@ -106,9 +107,7 @@ const Header = () => {
 
                             {/* Featured Action (Large Central Element) */}
                             <div className="header-center">
-                                <a href="/makeyourcandle" className="featured-action">
-                                    Candle Making Classes
-                                </a>
+                                <Link to="/makeyourcandle" className="featured-action">Candle Making Classes</Link>
                             </div>
 
                             {/* CART */}

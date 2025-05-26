@@ -1,5 +1,10 @@
 import React from 'react';
 import styles from './aboutus.module.css';
+import candleOne from '/src/assets/img/candleone.jpg'
+import candleTwo from '/src/assets/img/candletwo.jpg'
+import candleThree from '/src/assets/img/candlethree.jpg'
+import candleFour from '/src/assets/img/candlefour.jpg'
+import candleFive from '/src/assets/img/candlefive.jpg'
 
 const AboutUs = () => {
     return (
@@ -32,7 +37,7 @@ const AboutUs = () => {
                     <br/>
                     <div className={styles.imageContent}>
                         <img
-                            src="src/assets/img/candleone.jpg"
+                            src={candleOne}
                             alt="Candle making supplies"
                             className={styles.contentImage}
                         />
@@ -45,7 +50,7 @@ const AboutUs = () => {
                 <div className={styles.visualStoryWrapper}>
                     <div className={styles.visualStoryItem}>
                         <img
-                            src="src/assets/img/candletwo.jpg"
+                            src={candleTwo}
                             alt="Lit candle"
                             className={styles.visualImage}
                         />
@@ -53,7 +58,7 @@ const AboutUs = () => {
                     </div>
                     <div className={styles.visualStoryItem}>
                         <img
-                            src="src/assets/img/candlethree.jpg"
+                            src={candleThree}
                             alt="Mt. Kenya landscape"
                             className={styles.visualImage}
                         />
@@ -61,7 +66,7 @@ const AboutUs = () => {
                     </div>
                     <div className={styles.visualStoryItem}>
                         <img
-                            src="src/assets/img/candlefour.jpg"
+                            src={candleFour}
                             alt="Candle making workshop"
                             className={styles.visualImage}
                         />
