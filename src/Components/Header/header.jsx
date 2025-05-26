@@ -54,15 +54,19 @@ const Header = () => {
                                 </li>
                                 <li><a href="#" onClick={() => navigate('/aboutus')}><i className="fa fa-address-book"></i> About Us</a>
                                 </li>
+
+                                 <li><a href="#" onClick={() => window.history.back()}><i className="fa fa-arrow-left"></i> Back</a>
+                                </li>
+
                                 <li className="dropdown" ref={dropdownRef}>
 
-                                    {!isLoading && isAuthenticated && (
+                                    {/*{!isLoading && isAuthenticated && (
                                         <button
                                             className="dropbtn"
                                             onClick={() => window.history.back()}>
                                             <i className="fa fa-arrow-left"></i> Back
                                         </button>
-                                    )}
+                                    )}*/}
 
                                     <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
                                         <a href="#" onClick={() => {
@@ -89,6 +93,7 @@ const Header = () => {
                                             className="fa fa-user"></i> Account</a>
                                     </div>
                                 </li>
+
                             </ul>
                         </div>
                     </div>
