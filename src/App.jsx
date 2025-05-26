@@ -64,7 +64,7 @@ function App() {
     return (
         <AuthProvider> {/* Wrap with AuthProvider before CartProvider */}
             <CartProvider>
-                <BrowserRouter basename="/ciomaingi">
+                <BrowserRouter basename="/">
                     <ErrorBoundary>
                         <AppContent/>
                     </ErrorBoundary>
