@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import './viewClassBookings.css';
+import {baseUrl} from "../../../Config/api.js";
 
 const ClassBookings = () => {
     const [bookings, setBookings] = useState([]);
@@ -10,7 +11,7 @@ const ClassBookings = () => {
     useEffect(() => {
         const fetchBookings = async () => {
             try {
-                const response = await axios.get('https://ciomaingifarm.website/api/v1/candleclasses/list');
+                const response = await axios.get(`${baseUrl}/candleclasses/list`);
                 setBookings(response.data);
                 setIsLoading(false);
             } catch (err) {
@@ -28,7 +29,7 @@ const ClassBookings = () => {
         }
 
         try {
-            await axios.delete(`https://ciomaingifarm.website/api/v1/candleclasses/${bookingId}`);
+            await axios.delete(`${baseUrl}/candleclasses/${bookingId}`);
             setBookings(bookings.filter((booking) => booking.id !== bookingId));
             alert('Booking deleted successfully!');
         } catch (err) {
@@ -58,7 +59,7 @@ const ClassBookings = () => {
         <div className="bookings-container">
             <header className="bookings-header">
                 <br/>
-                <h3>Candle Making Class Bookings</h3>
+                <h2>Candle Making Class Bookings</h2>
             </header>
 
             <section className="bookings-list">

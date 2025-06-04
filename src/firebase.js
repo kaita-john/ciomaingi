@@ -1,6 +1,5 @@
-
 import {initializeApp} from "firebase/app";
-import { getStorage } from "firebase/storage";
+import {getStorage} from "firebase/storage";
 
 const firebaseConfig = {
   apiKey: "AIzaSyC-7I62H2YOy71mua1QK1hFAR8Re0cvy-M",

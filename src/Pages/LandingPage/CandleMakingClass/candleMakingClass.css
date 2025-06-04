@@ -15,7 +15,7 @@
 
 .header h1 {
     font-size: 2.5rem;
-    color: #2E8B57;
+    color:  #00312e;
     margin: 0;
 }
 
@@ -47,7 +47,7 @@
 }
 
 .card h2 {
-    color: #2E8B57;
+    color:  #00312e;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
@@ -69,7 +69,7 @@
 
 .form-section h2 {
     text-align: center;
-    color: #2E8B57;
+    color: #00312e;
     font-size: 2rem;
     margin-bottom: 30px;
 }
@@ -124,7 +124,7 @@
 .submit-button {
     padding: 15px;
     font-size: 1.2rem;
-    background: #2E8B57;
+    background:  #00312e;
     color: #FFF;
     border: none;
     border-radius: 8px;

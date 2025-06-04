@@ -17,12 +17,12 @@
 }
 
 .header {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    color: #fff;
-    background: linear-gradient(45deg, grey, green);
+    color: #00312e;
     padding: 8px 15px;
     margin: -15px -15px 15px;
+    margin-top: 5px;
     border-radius: 8px 8px 0 0;
     text-align: center;
 }
@@ -138,7 +138,7 @@
     font-size: 13px;
     font-weight: 500;
     color: #fff;
-    background: grey;
+    background: #00312e;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -197,35 +197,33 @@
 }
 
 
-
-
 /* New styles for stock status and out-of-stock button */
 .inStock {
-  color: #28a745;
-  font-weight: 500;
+    color: #28a745;
+    font-weight: 500;
 }
 
 .outOfStock {
-  color: #d9534f;
-  font-weight: 500;
+    color: #d9534f;
+    font-weight: 500;
 }
 
 .outOfStockButton {
-  padding: 8px 15px;
-  background: #d9534f;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background 0.3s ease;
+    padding: 8px 15px;
+    background: #d9534f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
 }
 
 .outOfStockButton:hover {
-  background: #c9302c;
+    background: #c9302c;
 }
 
 .outOfStockButton:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+    background: #ccc;
+    cursor: not-allowed;
 }

@@ -76,7 +76,7 @@ body {
 
 .input:focus {
   outline: none;
-  border-color: #e44d26; /* Orange accent */
+  border-color: #e090ad; /* Orange accent */
   box-shadow: 0 0 6px rgba(228, 77, 38, 0.3);
 }
 
@@ -85,7 +85,7 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;
-  background: linear-gradient(90deg, #e44d26, #f97316); /* Orange gradient */
+  background: linear-gradient(90deg, #e090ad, #f97316); /* Orange gradient */
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -120,7 +120,7 @@ body {
 }
 
 .forgotLink {
-  color: #e44d26;
+  color: #e090ad;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease;

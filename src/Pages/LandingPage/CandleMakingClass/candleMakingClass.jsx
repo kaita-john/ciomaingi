@@ -1,6 +1,7 @@
 import './CandleMakingClass.css';
-import React, { useState } from "react";
+import React, {useState} from "react";
 import axios from 'axios';
+import {baseUrl} from "../../../Config/api.js";
 
 const CandleMakingClass = () => {
   const [formData, setFormData] = useState({
@@ -87,7 +88,7 @@ const CandleMakingClass = () => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('https://ciomaingifarm.website/api/v1/candleclasses/create', formData);
+      const response = await axios.post(`${baseUrl}/candleclasses/create`, formData);
       console.log('Booking Response:', response.data);
       alert('Thank you! Your booking request has been successfully submitted.');
       // Reset form
@@ -113,6 +114,7 @@ const CandleMakingClass = () => {
 
   return (
     <div className="page-container">
+
       <header className="header">
         <h1>CandleMaking Classes</h1><br />
       </header>
@@ -197,6 +199,7 @@ const CandleMakingClass = () => {
           </button>
         </form>
       </section>
+
     </div>
   );
 };

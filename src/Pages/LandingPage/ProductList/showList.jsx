@@ -20,20 +20,16 @@ const ShowList = ({filteredProducts}) => {
 
                     <div className="product" style={{width: "auto"}}>
                         <div style={{padding: 20}} className="">
-                            <img width="auto" height={180} src={product.mainimage} alt={product.name}/>
+                            <img width={190} height={180} src={product.mainimage} alt={product.name}/>
                         </div>
                         <div className="product-body">
                             {/* <p className="product-category">{product.category || "No category"}</p> */}
-                            <h3
-                                className="product-name"
-                                style={{
-                                    textTransform: 'none', // Prevent uppercase transformation
-                                    marginTop: '10px',     // Remove top margin
-                                    marginBottom: '10px',  // Remove bottom margin
-                                }}
-                            >
-                                <a href="#">{product.name}</a>
-                            </h3>
+                            <a style={{
+                                color: '#00312e',
+                                marginTop: '10px',
+                                fontSize: "16px",
+                                opacity: "600%"
+                            }} href="#">{product.name}</a>
                             <h4
                                 className="product-price"
                                 style={{
@@ -47,7 +43,7 @@ const ShowList = ({filteredProducts}) => {
                         <button
                             style={{
                                 width: "98%",
-                                backgroundColor: "#FFC300", // Light gray background for a light theme
+                                backgroundColor: "#00312e", // Light gray background for a light theme
                                 border: "1px solid #E0E0E0", // Light gray border for a subtle look
                                 color: "white", // Dark gray text for contrast
                                 padding: "8px 16px", // Adequate padding for a clean button
@@ -66,9 +62,9 @@ const ShowList = ({filteredProducts}) => {
                             }}*/
                         >
                             <i
-                               style={{
-                                color: "white", // Dark gray text for contrast
-                            }}
+                                style={{
+                                    color: "white", // Dark gray text for contrast
+                                }}
                                 className="fa fa-eye"></i> View More
                         </button>
                     </div>

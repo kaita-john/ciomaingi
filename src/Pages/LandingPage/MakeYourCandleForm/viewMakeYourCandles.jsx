@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import "./viewMakeYourCandles.css";
+import {baseUrl} from "../../../Config/api.js";
 
 const ViewMakeYourCandles = () => {
     const [candles, setCandles] = useState([]);
@@ -11,7 +12,7 @@ const ViewMakeYourCandles = () => {
     useEffect(() => {
         const fetchCandles = async () => {
             try {
-                const response = await axios.get("https://ciomaingifarm.website/api/v1/makeyourcandle/list");
+                const response = await axios.get(`${baseUrl}/makeyourcandle/list`);
                 setCandles(response.data);
             } catch (err) {
                 setError("Failed to fetch candle orders. Please try again later.");
@@ -28,7 +29,7 @@ const ViewMakeYourCandles = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this order?")) {
             try {
-                await axios.delete(`https://ciomaingifarm.website/api/v1/makeyourcandle/${id}`);
+                await axios.delete(`${baseUrl}/makeyourcandle/${id}`);
                 setCandles((prevCandles) => prevCandles.filter((candle) => candle.id !== id));
                 alert("Order deleted successfully!");
             } catch (err) {
@@ -48,7 +49,7 @@ const ViewMakeYourCandles = () => {
 
     return (
         <div className="candles-container">
-            <h3 align='center'>View Candle Orders</h3><br/>
+            <h2 align='center'>View Candle Orders</h2><br/>
             <table className="candles-table">
                 <thead>
                     <tr>

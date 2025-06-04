@@ -1,8 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import {useCart} from "../../Hooks/cartContext.jsx";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import './header.css'
-import { Link } from "react-router-dom";
 import {useAuth} from "../authContext.jsx";
 
 const Header = () => {

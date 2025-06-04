@@ -58,12 +58,12 @@
 
 .contact-info i, .nav-links i {
     margin-right: 8px;
-    color: #e44d26;
+    color: #e090ad;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover i, .nav-links a:hover i {
-    color: #FFC300;
+    color: white;
 }
 
 /* Dropdown Menu */
@@ -140,7 +140,7 @@
 
 .dropdown-content i {
     margin-right: 10px;
-    color: #e44d26;
+    color: #e090ad;
 }
 
 .dropdown-content a:hover i {
@@ -151,7 +151,7 @@
 .main-header {
     padding: 15px 0;
     background: linear-gradient(90deg, #1a1a1a, #2d2d2d);
-    border-bottom: 3px solid #e44d26;
+    border-bottom: 3px solid #e090ad;
 }
 
 .header-row {
@@ -192,7 +192,7 @@
     font-size: 18px;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 25px rgba(78, 205, 196, 0.4), 0 0 15px rgba(69, 183, 209, 0.3);
+    box-shadow: 0 8px 25px #FFF4F2, 0 0 15px #FDF7F5;
     border: 2px solid transparent;
     letter-spacing: 2px;
     position: relative;
@@ -215,12 +215,18 @@
 
 .featured-action:hover {
     background: black;
+    color: pink;
     /*box-shadow: 0 12px 30px rgba(69, 183, 209, 0.5), 0 0 20px rgba(78, 205, 196, 0.3);*/
     /*border-color: #fff;*/
 }
 
 .featured-action:hover::before {
     opacity: 1;
+}
+
+
+.featured-action:visited {
+  color: lightpink; /* or whatever you want */
 }
 
 .header-cart {
@@ -246,11 +252,11 @@
 }
 
 .cart-toggle:hover {
-    color: #FFC300;
+    color: white;
     transform: translateY(-2px);
     background: rgba(255, 195, 0, 0.1);
-    border-color: #FFC300;
-    box-shadow: 0 4px 12px rgba(255, 195, 0, 0.3);
+    border-color: whitesmoke;
+    box-shadow: white;
 }
 
 .cart-toggle i {
@@ -259,7 +265,7 @@
 }
 
 .cart-toggle:hover i {
-    color: #FFC300;
+    color: white;
 }
 
 .cart-text {
@@ -272,7 +278,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    background: #e44d26;
+    background: #e090ad;
     color: #fff;
     width: 24px;
     height: 24px;
@@ -287,9 +293,15 @@
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /* Responsive Design */

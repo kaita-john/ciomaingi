@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './category.css'
 import axios from "axios";
+import {baseUrl} from "../../../Config/api.js";
 
 const CategoryPage = () => {
 
@@ -16,7 +17,7 @@ const CategoryPage = () => {
 
     const fetchCategories = async () => {
         try {
-            const response = await axios.get("https://ciomaingifarm.website/api/v1/categories/list");
+            const response = await axios.get("${baseUrl}/categories/list");
             setCategories(response.data);
         } catch (error) {
             console.error("Error fetching categories:", error);
@@ -28,7 +29,7 @@ const CategoryPage = () => {
         if (!newCategory.trim()) return;
 
         try {
-            const response = await axios.post("https://ciomaingifarm.website/api/v1/categories/create", {
+            const response = await axios.post("${baseUrl}/categories/create", {
                 name: newCategory,
             });
             setCategories([...categories, response.data]);
@@ -50,7 +51,7 @@ const CategoryPage = () => {
         if (!editCategoryName.trim()) return;
 
         try {
-            await axios.put(`https://ciomaingifarm.website/api/v1/categories/${editCategoryId}`, {
+            await axios.put(`${baseUrl}/categories/${editCategoryId}`, {
                 name: editCategoryName,
             });
             const updatedCategories = categories.map((cat) =>
@@ -67,7 +68,7 @@ const CategoryPage = () => {
     // Delete a category
     const handleDeleteCategory = async (id) => {
         try {
-            await axios.delete(`https://ciomaingifarm.website/api/v1/categories/${id}`);
+            await axios.delete(`${baseUrl}/categories/${id}`);
             const updatedCategories = categories.filter((cat) => cat.id !== id);
             setCategories(updatedCategories);
         } catch (error) {

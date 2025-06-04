@@ -2,6 +2,7 @@ import './items.css';
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import {baseUrl} from "../../../Config/api.js";
 
 const ItemListPage = () => {
     const [items, setItems] = useState([]);
@@ -13,7 +14,7 @@ const ItemListPage = () => {
     useEffect(() => {
         const fetchItems = async () => {
             try {
-                const response = await axios.get("https://ciomaingifarm.website/api/v1/items/list");
+                const response = await axios.get(`${baseUrl}/items/list`);
                 setItems(response.data);
             } catch (error) {
                 console.error("Error fetching items:", error);
@@ -29,7 +30,7 @@ const ItemListPage = () => {
     const handleDelete = async (id) => {
         if (window.confirm("Are you sure you want to delete this item?")) {
             try {
-                await axios.delete(`https://ciomaingifarm.website/api/v1/items/${id}`);
+                await axios.delete(`${baseUrl}/items/${id}`);
                 setItems(items.filter((item) => item.id !== id)); // Remove the deleted item from the list
                 alert("Item deleted successfully!");
             } catch (error) {
@@ -43,7 +44,7 @@ const ItemListPage = () => {
     const handleMarkOutOfStock = async (item) => {
         if (window.confirm(`Are you sure you want to mark "${item.name}" as out of stock?`)) {
             try {
-                await axios.patch(`https://ciomaingifarm.website/api/v1/items/out/${item.id}`, {
+                await axios.patch(`${baseUrl}/items/out/${item.id}`, {
                     inStock: false,
                     amount: 0,
                 });
@@ -65,7 +66,7 @@ const ItemListPage = () => {
     const handleRestock = async (item) => {
         if (window.confirm("Are you sure you have restocked this item?")) {
             try {
-                await axios.patch(`https://ciomaingifarm.website/api/v1/items/restock/${item.id}`, {
+                await axios.patch(`${baseUrl}/items/restock/${item.id}`, {
                     inStock: true,
                     amount: 1, // Default to 1, you can adjust this as needed
                 });

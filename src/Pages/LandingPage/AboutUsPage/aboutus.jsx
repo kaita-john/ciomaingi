@@ -4,7 +4,6 @@ import candleOne from '/src/assets/img/candleone.jpg'
 import candleTwo from '/src/assets/img/candletwo.jpg'
 import candleThree from '/src/assets/img/candlethree.jpg'
 import candleFour from '/src/assets/img/candlefour.jpg'
-import candleFive from '/src/assets/img/candlefive.jpg'
 
 const AboutUs = () => {
     return (

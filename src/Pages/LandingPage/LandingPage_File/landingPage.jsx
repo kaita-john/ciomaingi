@@ -1,5 +1,4 @@
-import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, {useRef, useState} from 'react';
 import Collections from "../Collections/collections.jsx";
 import ProductList from "../ProductList/productlist.jsx"; // If you need navigation, include this
 

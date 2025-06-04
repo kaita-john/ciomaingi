@@ -12,11 +12,11 @@ const Footer = () => {
                     <div className="row"
                          style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center'}}>
 
-                        <div style={{display: 'flex', justifyContent: 'center', marginBottom: '20px'}}>
+                        <div style={{display: 'flex', justifyContent: 'center', marginBottom: '5px'}}>
                             <a href="YOUR_YOUTUBE_LINK" target="_blank" rel="noopener noreferrer" style={{
                                 color: '#FFFFFF',
                                 margin: '0 15px',
-                                fontSize: '24px',
+                                fontSize: '18px',
                                 transition: 'color 0.3s ease'
                             }} onMouseOver={(e) => e.target.style.color = '#00BFFF'}
                                onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
@@ -25,7 +25,7 @@ const Footer = () => {
                             <a href="YOUR_FACEBOOK_LINK" target="_blank" rel="noopener noreferrer" style={{
                                 color: '#FFFFFF',
                                 margin: '0 15px',
-                                fontSize: '24px',
+                                fontSize: '18px',
                                 transition: 'color 0.3s ease'
                             }} onMouseOver={(e) => e.target.style.color = '#1877F2'}
                                onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
@@ -34,7 +34,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com/cio_maingi_candles/" target="_blank" rel="noopener noreferrer" style={{
                                 color: '#FFFFFF',
                                 margin: '0 15px',
-                                fontSize: '24px',
+                                fontSize: '18px',
                                 transition: 'color 0.3s ease'
                             }} onMouseOver={(e) => e.target.style.color = '#E4405F'}
                                onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>
@@ -43,7 +43,7 @@ const Footer = () => {
                             <a href="YOUR_TWITTER_LINK" target="_blank" rel="noopener noreferrer" style={{
                                 color: '#FFFFFF',
                                 margin: '0 15px',
-                                fontSize: '24px',
+                                fontSize: '18px',
                                 transition: 'color 0.3s ease'
                             }} onMouseOver={(e) => e.target.style.color = '#1DA1F2'}
                                onMouseOut={(e) => e.target.style.color = '#FFFFFF'}>

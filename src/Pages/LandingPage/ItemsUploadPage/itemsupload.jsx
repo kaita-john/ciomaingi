@@ -1,10 +1,11 @@
 import styles from './itemupload.module.css'; // Import CSS Module
-import {ref, uploadBytes, getDownloadURL} from "firebase/storage";
+import {getDownloadURL, ref, uploadBytes} from "firebase/storage";
 import {storage} from "../../../firebase.js";
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 import {useLocation} from "react-router-dom";
 import {useGetCategories} from "../../../Hooks/useAPI.js";
+import {baseUrl} from "../../../Config/api.js";
 
 const ItemUploadPage = () => {
 
@@ -66,9 +67,9 @@ const ItemUploadPage = () => {
         };
         try {
             if (item) {
-                await axios.put(`https://ciomaingifarm.website/api/v1/items/${item.id}`, payload);
+                await axios.put(`${baseUrl}/items/${item.id}`, payload);
             } else {
-                await axios.post("https://ciomaingifarm.website/api/v1/items/create", payload);
+                await axios.post(`${baseUrl}/items/create`, payload);
             }
             alert("Item saved successfully!");
         } catch (error) {
@@ -81,7 +82,7 @@ const ItemUploadPage = () => {
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.header}>{item ? "Edit Item" : "Add New Item"}</h2>
+            <h2 className={styles.header}>{item ? "Edit Item" : "Add A New Item"}</h2>
             <form onSubmit={handleSubmit} className={styles.formLayout}>
                 <div className={styles.inputSection}>
                     <div className={styles.formCard}>

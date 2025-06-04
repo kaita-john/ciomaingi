@@ -24,7 +24,7 @@ const CheckoutPage = () => {
 
     // Calculate total price
     const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
-    const shippingCost = 250; // Fixed shipping cost
+    const shippingCost = 0; // Fixed shipping cost
     const totalWithShipping = totalPrice + shippingCost;
 
     // State for user information
@@ -68,7 +68,7 @@ const CheckoutPage = () => {
             <h2 className="checkout-title">Checkout</h2>
 
             <div className="checkout-form">
-                <h3>Contact Information</h3>
+                <h2 align="center">Contact Information</h2>
                 <input type="text" name="name" placeholder="First name" value={userInfo.name}
                        onChange={handleInputChange}/>
                 <input type="email" name="email" placeholder="Email" value={userInfo.email}
@@ -80,7 +80,7 @@ const CheckoutPage = () => {
             </div>
 
             <div className="product-list">
-                <h3>Your Order</h3>
+                <h2 align="center">Your Order</h2>
                 {cart.map((item) => (
                     <div key={item.id} className="product-item">
                         <span className="product-name">{item.name}</span>
@@ -92,7 +92,7 @@ const CheckoutPage = () => {
 
             <div className="order-summary">
                 <br/>
-                <h3>Order Summary</h3>
+                <h2 align="center">Order Summary</h2>
                 <div className="summary-row">
                     {/*<span>Subtotal</span>
                     <span>KSh {totalPrice.toFixed(2)}</span>*/}

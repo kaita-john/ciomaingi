@@ -5,6 +5,7 @@ import React, {useState} from "react";
 import useSCrollToTopHook from "../../../Hooks/useScrollToTopHook.js";
 import {useCart} from "../../../Hooks/cartContext.jsx";
 import axios from 'axios';
+import {baseUrl} from "../../../Config/api.js";
 
 const ProductDetails = () => {
     useSCrollToTopHook();
@@ -70,7 +71,7 @@ const ProductDetails = () => {
         };
 
         try {
-            const response = await axios.post('https://ciomaingifarm.website/api/v1/items/notify-out-of-stock', notifyData);
+            const response = await axios.post(`${baseUrl}/items/notify-out-of-stock`, notifyData);
             if (response.data.status === 'success') {
                 alert(response.data.message);
                 setDialogData({name: '', email: ''}); // Reset form
@@ -139,7 +140,7 @@ const ProductDetails = () => {
                 <div className={styles.productInfo}>
                     <div className={styles.productInfoCard}>
                         <h1 className={styles.productTitle}>{product.name}</h1>
-                        <h3 className={styles.productPrice}>KSh {product.price}</h3>
+                        <p className={styles.productPrice} style={{color:"green"}}>KSh {product.price}</p>
 
                         {/* Stock Status */}
 
@@ -171,7 +172,7 @@ const ProductDetails = () => {
                         )}
 
                         <div className={styles.descriptionCard}>
-                            <p className={styles.productDescription}>{product.description}</p>
+                            <p className={styles.productDescription} style={{fontSize: '14px'}}>{product.description}</p>
                         </div>
                     </div>
 
@@ -182,7 +183,7 @@ const ProductDetails = () => {
                                 className={styles.buyNow}
                                 onClick={handleAddToCart}
                             >
-                                🛒 {product.inStock ? 'Add to Cart' : 'Notify Me When Available'}
+                                 {product.inStock ? 'Add to Cart' : 'Notify Me When Available'}
                             </button>
                         </div>
                     </div>
@@ -193,14 +194,14 @@ const ProductDetails = () => {
             {showDialog && (
                 <div className={styles.dialogOverlay}>
                     <div className={styles.dialog}>
-                        <h3>Notify Me When Available</h3>
-                        <p>
+                        <p style={{color: '#00312e', fontSize: '19px'}}>Notify Me When Available</p>
+                        <p style={{color: 'black', fontSize: '14px'}}>
                             Sorry, <strong>{product.name}</strong> is currently out of stock. Enter your details below,
                             and we'll notify you when it's back!
                         </p>
                         <form onSubmit={handleDialogSubmit}>
                             <div className={styles.dialogField}>
-                                <label htmlFor="name">Name</label>
+                                <label style={{ fontSize: '13px'}} htmlFor="name">Name</label>
                                 <input
                                     type="text"
                                     name="name"
@@ -211,7 +212,7 @@ const ProductDetails = () => {
                                 />
                             </div>
                             <div className={styles.dialogField}>
-                                <label htmlFor="email">Email</label>
+                                <label  style={{ fontSize: '13px'}} htmlFor="email">Email</label>
                                 <input
                                     type="email"
                                     name="email"

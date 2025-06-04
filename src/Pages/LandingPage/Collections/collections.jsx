@@ -39,9 +39,7 @@ const Collections = ({onCategorySelect}) => {
                     {/* shop */}
                     {categories && categories.map((category, index) => {
                         return <div className="col-md-3 col-xs-6" key={category.id}
-                                    onClick={() => {
-                                        handleCategoryClick(category.name)
-                                    }}
+                                    onClick={() => {handleCategoryClick(category.name)}}
                         > {/* Added key prop */}
                             <div className="shop">
                                 <div className="shop-img">
@@ -52,7 +50,7 @@ const Collections = ({onCategorySelect}) => {
                                         style={{
                                             borderRadius: "15px",
                                             color: "white",
-                                            backgroundColor: "rgba(0, 0, 0, 0.7)", /* Changed to semi-transparent black for better visibility */
+                                            backgroundColor: "rgba(0, 0, 0, 0.3)", /* Changed to semi-transparent black for better visibility */
                                             padding: "5px",
                                             position: "relative", /* Fix the h4 at the top of the viewport */
                                             top: 0, /* Position at the very top of the page */
@@ -60,15 +58,15 @@ const Collections = ({onCategorySelect}) => {
                                             width: "100%", /* Span the full width of the viewport */
                                             zIndex: 1000, /* Ensure it stays on top of other elements */
                                             textAlign: "center", /* Center-align text for better aesthetics */
-                                            margin: 0, /* Remove default margins */
-                                            fontSize: "16px", /* Adjust font size for readability */
+                                            margin: "17px 20px", /* Remove default margins */
+                                            fontSize: "15px", /* Adjust font size for readability */
                                         }}
                                     >
-                                        {category.name}
+                                        {category.name} >
                                     </h4>
-                                    <a href="#" style={{color: "white"}} className="cta-btn">
-                                        Shop now <i className="fa fa-arrow-circle-right"></i>
-                                    </a>
+                                    {/*<a href="#" style={{color: "white"}} className="cta-btn">*/}
+                                    {/*    Shop now <i className="fa fa-arrow-circle-right"></i>*/}
+                                    {/*</a>*/}
                                 </div>
                             </div>
                         </div>;
@@ -78,7 +76,7 @@ const Collections = ({onCategorySelect}) => {
                 </div>
                 {/*/row */}
             </div>
-            {categoryloading && <p>Loading Top...</p>}
+            {/*{categoryloading && <p>Loading Top...</p>}*/}
             {error && <p className="error">{error}</p>}
             {/*/container */}
         </div>

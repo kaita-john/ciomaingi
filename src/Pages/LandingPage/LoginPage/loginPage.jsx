@@ -3,6 +3,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import axios from "axios"; // Install with `npm install axios`
 import styles from "./LoginPage.module.css";
 import {useAuth} from "../../../Components/authContext.jsx";
+import {baseUrl} from "../../../Config/api.js";
 
 const LoginPage = () => {
 
@@ -21,7 +22,7 @@ const LoginPage = () => {
         setError("");
 
         try {
-            const response = await axios.post("https://ciomaingifarm.website/api/v1/users/login", {
+            const response = await axios.post(`${baseUrl}/users/login`, {
                 email,
                 password,
             });

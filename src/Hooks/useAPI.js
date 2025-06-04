@@ -1,9 +1,7 @@
 import {useCallback, useEffect, useState} from "react";
-import {useNavigate} from 'react-router-dom';
 import axios from 'axios';
+import {baseUrl} from "../Config/api.js";
 
-
-const baseUrl = "https://ciomaingifarm.website"
 
 function errorChecker(error, setError) {
     console.error("Request error:", error);
@@ -50,7 +48,7 @@ export function useGetItems(productId, setMainImage) {
 
         const fetchProduct = async () => {
             try {
-                const url = productId ? `${baseUrl}/api/v1/items/${productId}` : `https://ciomaingifarm.website/api/v1/items/list`;
+                const url = productId ? `${baseUrl}/items/${productId}` : `${baseUrl}/items/list`;
                 const response = await axios.get(url);
 
                 // Check if the response contains valid data
@@ -87,7 +85,7 @@ export function postPurchase() {
         setPurchaseSuccess(false);
 
         try {
-            const response = await axios.post(`${baseUrl}/api/v1/purchases/create`,
+            const response = await axios.post(`${baseUrl}/purchases/create`,
                 payload
             );
             if (response.status >= 200 && response.status < 300) { // Check for successful status codes (2xx)
@@ -116,7 +114,7 @@ export function useGetCategories() {
     useEffect(() => {
         const fetchCategory = async () => {
             try {
-                const url = `${baseUrl}/api/v1/categories/list`
+                const url = `${baseUrl}/categories/list`
                 const response = await axios.get(url);
                 // Check if the response contains valid data
                 if (response.data) {

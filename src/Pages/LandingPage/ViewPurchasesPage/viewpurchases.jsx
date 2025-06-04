@@ -1,6 +1,7 @@
 import styles from './viewpurchases.module.css'; // Import CSS Module
 import React, {useEffect, useState} from "react";
 import axios from "axios";
+import {baseUrl} from "../../../Config/api.js";
 
 const PurchasesPage = () => {
     const [purchases, setPurchases] = useState([]);
@@ -10,7 +11,7 @@ const PurchasesPage = () => {
     useEffect(() => {
         const fetchPurchases = async () => {
             try {
-                const response = await axios.get("https://ciomaingifarm.website/api/v1/purchases/list");
+                const response = await axios.get(`${baseUrl}/purchases/list`);
                 setPurchases(response.data);
             } catch (error) {
                 setError(error.message || "An error occurred while fetching purchases.");
