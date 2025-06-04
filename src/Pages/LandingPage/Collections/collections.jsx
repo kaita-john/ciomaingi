@@ -62,7 +62,7 @@ const Collections = ({onCategorySelect}) => {
                                             fontSize: "15px", /* Adjust font size for readability */
                                         }}
                                     >
-                                        {category.name} >
+                                        {category.name}
                                     </h4>
                                     {/*<a href="#" style={{color: "white"}} className="cta-btn">*/}
                                     {/*    Shop now <i className="fa fa-arrow-circle-right"></i>*/}
